@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SG Monogram Icon">
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <rect x="3" y="3" width="58" height="58" rx="11" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="26" fill="#f8fafc">SG</text>
+  <circle cx="50" cy="14" r="5" fill="#10b981"/>
+</svg>

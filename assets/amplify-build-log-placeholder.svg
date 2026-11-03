@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-label="AWS Amplify deployment build log showing a Linux case-sensitive file path error and baseDirectory fix, with space to replace or preview your own screenshot">
+  <rect width="760" height="360" rx="12" fill="#090d16" stroke="#334155" stroke-width="2"/>
+  <!-- Window Header -->
+  <rect width="760" height="38" rx="12" fill="#1e293b"/>
+  <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+  <circle cx="42" cy="19" r="6" fill="#f59e0b"/>
+  <circle cx="62" cy="19" r="6" fill="#10b981"/>
+  <text x="380" y="24" text-anchor="middle" font-family="monospace" font-size="12" fill="#cbd5e1">aws-amplify-console — build-log-exhibit-05.log (Replaceable Screenshot Slot)</text>
+
+  <!-- Terminal Body -->
+  <g font-family="monospace" font-size="12.5">
+    <text x="24" y="70" fill="#94a3b8">2026-10-31T17:42:10.114Z [INFO]: # Starting phase: build</text>
+    <text x="24" y="94" fill="#94a3b8">2026-10-31T17:42:10.402Z [INFO]: # Checking static artifact directory...</text>
+    <text x="24" y="120" fill="#f87171">2026-10-31T17:42:11.008Z [ERROR]: !! CustomerError: Artifact directory '/dist' does not exist</text>
+    <text x="24" y="144" fill="#fbbf24">2026-10-31T17:42:11.012Z [WARN]:  Asset check: 'assets/Amplify-Log.png' returned 404 on Amazon Linux</text>
+    <text x="24" y="168" fill="#f87171">2026-10-31T17:42:11.015Z [ERROR]: Cause: Local Windows/macOS matched 'amplify-log.png' case-insensitively</text>
+    
+    <line x1="24" y1="190" x2="736" y2="190" stroke="#334155" stroke-dasharray="4 4"/>
+    
+    <text x="24" y="216" fill="#38bdf8">2026-10-31T17:48:02.110Z [FIX]:  1. Set amplify.yml artifacts.baseDirectory: '/' (plain HTML/CSS/JS)</text>
+    <text x="24" y="240" fill="#38bdf8">2026-10-31T17:48:02.115Z [FIX]:  2. Standardized all asset filenames to lowercase kebab-case</text>
+    <text x="24" y="268" fill="#34d399">2026-10-31T17:48:05.890Z [INFO]: # Deploying static bundle to Amazon S3 + CloudFront Edge...</text>
+    <text x="24" y="292" fill="#10b981" font-weight="700">2026-10-31T17:48:09.004Z [SUCCESS]: Deployment completed — Status: VERIFIED (HTTP 200)</text>
+  </g>
+
+  <!-- Dropzone badge -->
+  <rect x="24" y="312" width="712" height="32" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="380" y="332" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fde68a">Drop your real screenshot in assets/amplify-build-log.png or use the "Preview Your Screenshot" button below</text>
+</svg>

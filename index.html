@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayantan Ghosh | AI, Cloud &amp; Backend Engineer — AWS Portfolio</title>
+  <meta name="description"
+    content="Interactive portfolio of Sayantan Ghosh, MCA student at Techno International Newtown (MAKAUT), Kolkata. Features The Museum of My Mistakes, live FastAPI endpoint simulators, and AWS Amplify architecture.">
+  <meta name="author" content="Sayantan Ghosh">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sayantan Ghosh | AI, Cloud &amp; Backend Engineer — AWS Portfolio">
+  <meta property="og:description"
+    content="Explore Nyaya AI, AWS Log Analyzer, Kolkata Metro API, HealthFlow, and The Museum of My Mistakes — built for the AWS Builder Center Student Hackathon.">
+  <meta property="og:image" content="assets/aws-architecture.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sayantan Ghosh | AI, Cloud &amp; Backend Engineer — AWS Portfolio">
+  <meta name="twitter:description" content="Interactive Backend &amp; AI Portfolio with The Museum of My Mistakes.">
+
+  <!-- Case-sensitive lowercase asset paths for Amazon Linux on AWS Amplify -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Keyboard Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Sticky Single-Tap Navigation -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#top" class="brand-link" aria-label="Sayantan Ghosh Home">
+        <span class="brand-monogram" aria-hidden="true">SG</span>
+        <span>Sayantan Ghosh</span>
+      </a>
+
+      <nav aria-label="Primary sections">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#museum" id="nav-museum-link" class="nav-link nav-link-museum">Museum of Mistakes</a></li>
+          <li>
+            <button type="button" id="open-cmd-btn" class="nav-cmd-btn" aria-label="Open Quick Command Palette">
+              <span>Cmd+K</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle color theme">
+              <span id="theme-toggle-text">Light Mode</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section + Pulsing Sign Near Top of Page + Interactive Cloud Shell -->
+    <section id="top" class="hero-section">
+      <div class="container">
+        <!-- Creative Feature Sign: Visible immediately without scrolling or hovering -->
+        <div class="museum-marquee-wrapper">
+          <button type="button" id="top-museum-sign" class="museum-sign-btn" aria-controls="museum-wing">
+            <span class="sign-left">
+              <span class="sign-status-dot" aria-hidden="true"></span>
+              <span>
+                <span class="sign-title">Museum of my mistakes: open today, free entry</span>
+                <span class="sign-subtitle">7 real engineering bugs + Broken vs. Fixed code diffs from my FastAPI, LLM,
+                  ETL &amp; AWS Amplify builds</span>
+              </span>
+            </span>
+            <span class="sign-cta-pill">Enter Gallery &darr;</span>
+          </button>
+        </div>
+
+        <div class="hero-grid">
+          <div>
+            <span class="hero-badge">MCA '27 • Newtown, Kolkata • AWS Builder Center Hackathon</span>
+            <h1 class="hero-title">
+              Turning backend, <span class="highlight">AI &amp; AWS cloud</span> architectures into deployed API
+              products.
+            </h1>
+            <p class="hero-lead">
+              I'm <strong>Sayantan Ghosh</strong>, a Backend &amp; AI-focused MCA student at Techno International,
+              Newtown (MAKAUT). I build validated REST APIs, LLM document pipelines, and Linux log monitors using
+              Python, FastAPI, PostgreSQL, and AWS.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">Explore Projects &amp; API Sim</a>
+              <a href="https://github.com/Sayantan-da" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary">GitHub (@Sayantan-da) &nearr;</a>
+              <a href="https://linkedin.com/in/sayantan-ghosh-aa9500335" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary">LinkedIn &nearr;</a>
+            </div>
+          </div>
+
+          <!-- Interactive Cloud Shell Terminal (Merged from Previous Interactive Concept) -->
+          <aside class="terminal-card" aria-label="Interactive Cloud Shell">
+            <div class="terminal-topbar">
+              <div class="terminal-dots" aria-hidden="true">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-amber"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <span class="terminal-title">sayantan@aws-kolkata: ~/portfolio-cli</span>
+            </div>
+
+            <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
+              <button type="button" class="term-chip-btn" data-cmd="whoami">whoami</button>
+              <button type="button" class="term-chip-btn" data-cmd="skills">skills</button>
+              <button type="button" class="term-chip-btn" data-cmd="projects">projects</button>
+              <button type="button" class="term-chip-btn" data-cmd="aws-status">aws-status</button>
+              <button type="button" class="term-chip-btn" data-cmd="mistakes">mistakes</button>
+              <button type="button" class="term-chip-btn" data-cmd="clear">clear</button>
+            </div>
+
+            <div id="terminal-output" class="terminal-output" aria-live="polite">sayantan@aws-kolkata:~$ whoami
+              Sayantan Ghosh | Backend, AI &amp; Cloud Engineer
+              • MCA @ Techno International, Newtown (2025-2027)
+              • BCA @ Techno India College of Technology (2022-2025)
+              • Tap any command chip above or type 'help' below!</div>
+
+            <div class="terminal-input-row">
+              <label for="terminal-input" class="terminal-prompt">sayantan@aws:~$</label>
+              <input type="text" id="terminal-input" class="terminal-input"
+                placeholder="Type help, skills, projects, aws-status..." autocomplete="off">
+              <button type="button" id="terminal-run-btn" class="terminal-run-btn">Run</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE FEATURE: The Museum of My Mistakes + Interactive Code Diffs -->
+    <section id="museum" class="section museum-section" aria-labelledby="museum-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Creative Feature • Interactive Engineering Postmortems</span>
+          <h2 id="museum-heading" class="section-title">The Museum of My Mistakes</h2>
+          <p class="section-desc">
+            Tap any framed exhibit below (or use <kbd>Tab</kbd>, <kbd>Enter</kbd>, <kbd>&larr;</kbd>/<kbd>&rarr;</kbd>,
+            and <kbd>Esc</kbd>) to inspect its three-part placard (<strong>What I built</strong>, <strong>How it
+              failed</strong>, <strong>What I learned</strong>) and toggle between the <strong>Broken Code</strong> and
+            <strong>Production Fix</strong>.
+          </p>
+          <!-- Required one short line explaining why I built it -->
+          <p class="museum-why-line">
+            <strong>Why I built this:</strong> Finished project links only show what worked on the tenth try—documenting
+            the bugs that broke my first nine attempts shows how I actually debug and engineer systems.
+          </p>
+        </div>
+
+        <div class="museum-controls-bar">
+          <span class="museum-status-pill">7 Framed Exhibits • Live Broken vs. Fixed Code Diffs</span>
+          <button type="button" id="toggle-gallery-btn" class="museum-toggle-gallery-btn" aria-expanded="true"
+            aria-controls="museum-wing">
+            Collapse Gallery Wing
+          </button>
+        </div>
+
+        <div id="museum-wing" class="museum-wing">
+          <!-- 5 Framed Exhibits populated by script.js -->
+          <div id="exhibits-grid" class="exhibits-grid" role="region" aria-label="Museum Exhibit Frames"></div>
+
+          <!-- Active Exhibit Placard (Inline so it never blocks navigation or core sections) -->
+          <article id="placard-drawer" class="placard-drawer" aria-live="polite">
+            <div class="placard-header">
+              <div>
+                <span id="placard-kicker" class="placard-kicker">Exhibit 01 • Nyaya AI</span>
+                <h3 id="placard-title" class="placard-title">The Unchunked 80-Page PDF Crash</h3>
+              </div>
+              <div class="placard-actions">
+                <button type="button" id="prev-exhibit-btn" class="placard-nav-btn" aria-label="Previous exhibit">&larr;
+                  Prev</button>
+                <button type="button" id="next-exhibit-btn" class="placard-nav-btn" aria-label="Next exhibit">Next
+                  &rarr;</button>
+                <button type="button" id="close-placard-btn" class="placard-close-btn"
+                  aria-label="Close exhibit placard">Close Placard &times;</button>
+              </div>
+            </div>
+
+            <div class="placard-triad">
+              <div class="placard-card placard-card-built">
+                <span class="placard-part-label">1. What I Built</span>
+                <p id="placard-built" class="placard-part-text"></p>
+              </div>
+              <div class="placard-card placard-card-failed">
+                <span class="placard-part-label">2. How It Failed</span>
+                <p id="placard-failed" class="placard-part-text"></p>
+              </div>
+              <div class="placard-card placard-card-learned">
+                <span class="placard-part-label">3. What I Learned</span>
+                <p id="placard-learned" class="placard-part-text"></p>
+              </div>
+            </div>
+
+            <!-- Interactive Broken vs Fixed Code Diff Viewer -->
+            <div class="placard-diff-section">
+              <div class="diff-toolbar">
+                <span class="diff-label">Engineering Root-Cause Code Inspection</span>
+                <div class="diff-toggle-group" role="group" aria-label="Toggle broken or fixed code">
+                  <button type="button" id="diff-broken-btn" class="diff-tab-btn">View Broken Code (&times;)</button>
+                  <button type="button" id="diff-fixed-btn" class="diff-tab-btn active-diff-fixed">View Production Fix
+                    (&check;)</button>
+                </div>
+              </div>
+              <pre id="diff-code-display" class="diff-code-pre"></pre>
+            </div>
+
+            <!-- Exhibit 5: Space for Build-Log Screenshot + Instant Local Preview -->
+            <div id="placard-screenshot-box" class="placard-screenshot-box" hidden>
+              <div class="screenshot-header">
+                <div>
+                  <h4>Exhibit 05 Build-Log Evidence (AWS Amplify Deployment)</h4>
+                  <p class="screenshot-caption" id="screenshot-caption">
+                    Showing default Amplify build-log diagram. Drop your screenshot into
+                    <code>assets/amplify-build-log.png</code> or preview it live below.
+                  </p>
+                </div>
+                <div>
+                  <input type="file" id="screenshot-file-input" class="screenshot-upload-input" accept="image/*">
+                  <label for="screenshot-file-input" class="screenshot-upload-label">
+                    Preview Your Screenshot
+                  </label>
+                </div>
+              </div>
+              <div class="screenshot-frame">
+                <img id="hackathon-bug-img" src="assets/amplify-build-log-placeholder.svg" width="760" height="360"
+                  alt="AWS Amplify build log illustrating the Linux case-sensitive filename mismatch and baseDirectory fix">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">01 • Background &amp; Context</span>
+          <h2 id="about-heading" class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-prose">
+            <p>
+              I'm a <strong>Master of Computer Applications (MCA)</strong> student at <strong>Techno International,
+                Newtown</strong> (MAKAUT, 2025–2027), building on my <strong>BCA from Techno India College of
+                Technology</strong> (2022–2025) and vocational software engineering training at <strong>Euphoria Genx
+                Ltd</strong> in Kolkata.
+            </p>
+            <p>
+              My focus is backend architecture, data engineering, and applied AI: designing validated REST APIs in
+              FastAPI, structuring relational data in PostgreSQL, and wiring LLMs to solve practical regional
+              problems—whether that means translating dense legal PDFs into Bengali and Hindi or turning noisy Linux
+              server logs on AWS into readable incident summaries.
+            </p>
+            <p>
+              <strong>Outside coding:</strong> I live in <strong>Newtown, Kolkata</strong>. When I'm away from my
+              keyboard, I'm usually playing or watching football in Kolkata, commuting on the Kolkata Metro (which
+              inspired my Metro REST API project), or reading founder and engineering biographies.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="info-card">
+              <h3>Education</h3>
+              <ul>
+                <li><strong>MCA (2025–2027):</strong> Techno International, Newtown (MAKAUT)</li>
+                <li><strong>BCA (2022–2025):</strong> Techno India College of Technology (MAKAUT)</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Training &amp; Cloud Experience</h3>
+              <ul>
+                <li><strong>AWS Skills Center (2026):</strong> Cloud Practitioner foundations &amp; Linux on AWS</li>
+                <li><strong>Euphoria Genx Ltd (6 Weeks):</strong> Web development &amp; deployment lifecycle</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Hometown &amp; Languages</h3>
+              <p>Based in Newtown, Kolkata, West Bengal. Fluent in English, Bengali, and Hindi.</p>
+            </div>
+
+            <div class="info-card">
+              <h3>Interests Outside Coding</h3>
+              <p>Playing football, attending live matches in Kolkata, exploring city transit routes, and reading
+                biographies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE SKILLS SECTION -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">02 • Interactive Technical Toolkit</span>
+          <h2 id="skills-heading" class="section-title">Skills</h2>
+          <p class="section-desc">Tap any project filter below to highlight the exact technologies used in that build.
+          </p>
+        </div>
+
+        <div class="skill-filter-bar" role="group" aria-label="Highlight skills by project">
+          <button type="button" class="skill-filter-btn active-filter" data-filter="all">All Skills</button>
+          <button type="button" class="skill-filter-btn" data-filter="nyaya">Used in Nyaya AI</button>
+          <button type="button" class="skill-filter-btn" data-filter="loganalyzer">Used in AWS Log Analyzer</button>
+          <button type="button" class="skill-filter-btn" data-filter="metro">Used in Kolkata Metro API</button>
+          <button type="button" class="skill-filter-btn" data-filter="healthflow">Used in HealthFlow ETL</button>
+          <button type="button" class="skill-filter-btn" data-filter="portfolio">Used in AWS Portfolio</button>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">Languages</h3>
+            <ul class="skill-tags" aria-label="Programming languages">
+              <li class="skill-tag" data-projects="nyaya loganalyzer metro healthflow">Python</li>
+              <li class="skill-tag" data-projects="">Java</li>
+              <li class="skill-tag" data-projects="healthflow">SQL</li>
+              <li class="skill-tag" data-projects="portfolio">HTML5 &amp; CSS3</li>
+              <li class="skill-tag" data-projects="portfolio">JavaScript (ES6+)</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">Backend &amp; Web APIs</h3>
+            <ul class="skill-tags" aria-label="Backend and Web skills">
+              <li class="skill-tag" data-projects="nyaya loganalyzer metro">FastAPI</li>
+              <li class="skill-tag" data-projects="">Django</li>
+              <li class="skill-tag" data-projects="">Flask</li>
+              <li class="skill-tag" data-projects="nyaya loganalyzer metro healthflow">REST API Design</li>
+              <li class="skill-tag" data-projects="nyaya metro healthflow">Pydantic Validation</li>
+              <li class="skill-tag" data-projects="metro healthflow">JSON Schema</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">AI / ML &amp; NLP</h3>
+            <ul class="skill-tags" aria-label="AI and Machine Learning skills">
+              <li class="skill-tag" data-projects="nyaya loganalyzer">LLM Integration</li>
+              <li class="skill-tag" data-projects="nyaya">NLP Pipelines</li>
+              <li class="skill-tag" data-projects="nyaya">PDF Document Analysis</li>
+              <li class="skill-tag" data-projects="nyaya loganalyzer">Text Summarization</li>
+              <li class="skill-tag" data-projects="loganalyzer">Log Anomaly Detection</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">Cloud &amp; DevOps</h3>
+            <ul class="skill-tags" aria-label="Cloud and DevOps skills">
+              <li class="skill-tag" data-projects="portfolio">AWS Amplify Hosting</li>
+              <li class="skill-tag" data-projects="portfolio loganalyzer">Amazon S3 &amp; CloudFront</li>
+              <li class="skill-tag" data-projects="loganalyzer portfolio">Linux (Amazon Linux / Ubuntu)</li>
+              <li class="skill-tag" data-projects="nyaya loganalyzer metro healthflow portfolio">Git &amp; GitHub</li>
+              <li class="skill-tag" data-projects="nyaya metro">Render &amp; Cloudflare CDN</li>
+            </ul>
+          </div>
+
+          <div class="skill-group-card">
+            <h3 class="skill-group-title">Databases &amp; Data Engineering</h3>
+            <ul class="skill-tags" aria-label="Database and Data skills">
+              <li class="skill-tag" data-projects="healthflow">PostgreSQL (Supabase)</li>
+              <li class="skill-tag" data-projects="healthflow">ETL / Data Warehousing</li>
+              <li class="skill-tag" data-projects="healthflow">FHIR / CSV / JSON Ingestion</li>
+              <li class="skill-tag" data-projects="healthflow">PHI De-Identification</li>
+              <li class="skill-tag" data-projects="healthflow loganalyzer">Audit Logging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION + INTERACTIVE LIVE API SIMULATOR + INTERACTIVE AWS EXPLORER -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">03 • Shipped Builds &amp; Live Endpoint Sandbox</span>
+          <h2 id="projects-heading" class="section-title">Projects</h2>
+          <p class="section-desc">Four end-to-end backend, AI, and data engineering builds. Click <strong>Simulate API
+              Response</strong> on any card to inspect its live FastAPI request/response payload below.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Nyaya AI -->
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <h3 class="project-title">Nyaya AI — Legal EdTech Platform</h3>
+                <span class="project-badge">AI + Multilingual</span>
+              </div>
+              <p class="project-problem">
+                <strong>One-line problem:</strong> Legal documents and statutes are written in dense jargon and rarely
+                accessible in regional Indian languages.
+              </p>
+              <ul class="project-details-list">
+                <li>Built an AI legal assistant that answers legal queries in plain language via FastAPI and LLMs.</li>
+                <li>Designed a multilingual chatbot supporting <strong>English, Hindi, and Bengali</strong>.</li>
+                <li>Implemented chunked PDF document analysis and NLP summarization for long legal judgments.</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="project-tech-stack" aria-label="Nyaya AI technologies">
+                <li class="project-tech-pill">Python</li>
+                <li class="project-tech-pill">FastAPI</li>
+                <li class="project-tech-pill">LLMs</li>
+                <li class="project-tech-pill">NLP</li>
+                <li class="project-tech-pill">REST APIs</li>
+              </ul>
+              <div class="project-footer">
+                <button type="button" class="project-sim-btn" data-sim="nyaya">Simulate API Response &⚡;</button>
+                <a href="https://github.com/Sayantan-da" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub (@Sayantan-da) &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AI-Powered Log Analyzer -->
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <h3 class="project-title">AI-Powered Log Analyzer &amp; Incident Assistant</h3>
+                <span class="project-badge">AWS + AIOps</span>
+              </div>
+              <p class="project-problem">
+                <strong>One-line problem:</strong> Raw Linux server logs bury critical error spikes in thousands of
+                repetitive stack lines during outages.
+              </p>
+              <ul class="project-details-list">
+                <li>Ingests logs from Linux servers on AWS and parses them in Python into structured events.</li>
+                <li>Runs anomaly detection on error rates and new error signatures to surface incidents automatically.
+                </li>
+                <li>Uses an LLM to summarize anomalous log windows into plain-English root causes via FastAPI alerts.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="project-tech-stack" aria-label="Log Analyzer technologies">
+                <li class="project-tech-pill">FastAPI</li>
+                <li class="project-tech-pill">AWS</li>
+                <li class="project-tech-pill">Linux</li>
+                <li class="project-tech-pill">Python</li>
+                <li class="project-tech-pill">LLMs</li>
+              </ul>
+              <div class="project-footer">
+                <button type="button" class="project-sim-btn" data-sim="loganalyzer">Simulate API Response &⚡;</button>
+                <a href="https://github.com/Sayantan-da" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub (@Sayantan-da) &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Kolkata Metro API -->
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <h3 class="project-title">Kolkata Metro REST API</h3>
+                <span class="project-badge">Civic API</span>
+              </div>
+              <p class="project-problem">
+                <strong>One-line problem:</strong> Local transit developers lacked a clean, programmatic REST interface
+                for Kolkata Metro routes and station data.
+              </p>
+              <ul class="project-details-list">
+                <li>Created a documented REST API giving developers programmatic access to Kolkata Metro corridors and
+                  station metadata.</li>
+                <li>Engineered structured JSON responses and strict input validation in FastAPI with auto-generated
+                  OpenAPI docs.</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="project-tech-stack" aria-label="Kolkata Metro API technologies">
+                <li class="project-tech-pill">Python</li>
+                <li class="project-tech-pill">FastAPI</li>
+                <li class="project-tech-pill">REST APIs</li>
+                <li class="project-tech-pill">JSON Validation</li>
+              </ul>
+              <div class="project-footer">
+                <button type="button" class="project-sim-btn" data-sim="metro">Simulate API Response &⚡;</button>
+                <a href="https://github.com/Sayantan-da" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub (@Sayantan-da) &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: HealthFlow -->
+          <article class="project-card">
+            <div>
+              <div class="project-header">
+                <h3 class="project-title">HealthFlow — Healthcare Data Engineering Platform</h3>
+                <span class="project-badge">Data Engineering</span>
+              </div>
+              <p class="project-problem">
+                <strong>One-line problem:</strong> Clinical data arrives in inconsistent CSV, JSON, and FHIR formats
+                that require strict validation and PHI de-identification before warehousing.
+              </p>
+              <ul class="project-details-list">
+                <li>Built an end-to-end ETL pipeline to ingest, validate, transform, and warehouse healthcare records.
+                </li>
+                <li>Implemented automated data quality checks, PHI de-identification, and audit logging into PostgreSQL.
+                </li>
+                <li>Exposed pipeline health and validation metrics through REST APIs.</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="project-tech-stack" aria-label="HealthFlow technologies">
+                <li class="project-tech-pill">Python</li>
+                <li class="project-tech-pill">PostgreSQL</li>
+                <li class="project-tech-pill">ETL Pipelines</li>
+                <li class="project-tech-pill">FHIR / JSON</li>
+                <li class="project-tech-pill">REST APIs</li>
+              </ul>
+              <div class="project-footer">
+                <button type="button" class="project-sim-btn" data-sim="healthflow">Simulate API Response &⚡;</button>
+                <a href="https://github.com/Sayantan-da" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub (@Sayantan-da) &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive Live FastAPI Endpoint Sandbox -->
+        <div id="api-sandbox-card" class="api-sandbox-card" role="region"
+          aria-label="Interactive FastAPI Endpoint Simulator">
+          <div class="api-sandbox-header">
+            <div>
+              <h3>Interactive FastAPI Endpoint Simulator (Zero-Backend Demo)</h3>
+              <p class="section-desc">Switch between my 4 projects to inspect realistic request schemas and JSON
+                responses right in the browser.</p>
+            </div>
+            <code id="api-method-label" class="project-badge">POST /api/v1/legal/summarize</code>
+          </div>
+
+          <div class="api-sandbox-tabs" role="group" aria-label="Select project endpoint to simulate">
+            <button type="button" class="api-tab-btn active-api-tab" data-api="nyaya">1. Nyaya AI (Bengali Legal
+              LLM)</button>
+            <button type="button" class="api-tab-btn" data-api="loganalyzer">2. AWS Log Analyzer</button>
+            <button type="button" class="api-tab-btn" data-api="metro">3. Kolkata Metro API</button>
+            <button type="button" class="api-tab-btn" data-api="healthflow">4. HealthFlow FHIR ETL</button>
+          </div>
+
+          <div class="api-sandbox-grid">
+            <div class="api-pane">
+              <div class="api-pane-label">
+                <span>Request Payload (JSON)</span>
+                <span>Content-Type: application/json</span>
+              </div>
+              <pre id="api-req-pre" class="api-pre"></pre>
+            </div>
+            <div class="api-pane">
+              <div class="api-pane-label">
+                <span>FastAPI Validated Response</span>
+                <span style="color: #34d399;">HTTP 200 OK</span>
+              </div>
+              <pre id="api-res-pre" class="api-pre"></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive AWS Architecture Explorer -->
+        <div class="aws-arch-card">
+          <h3>Interactive AWS Architecture Explorer (Amplify Hosting + S3 + CloudFront)</h3>
+          <p>
+            Tap any stage in the pipeline below to inspect how this static portfolio deploys from GitHub to AWS edge
+            locations with zero build bottlenecks.
+          </p>
+
+          <div class="aws-nodes-grid" role="group" aria-label="AWS Pipeline Stages">
+            <button type="button" class="aws-node-btn active-aws-node" data-node-index="0">
+              <span class="aws-node-step">Stage 01</span>
+              <span class="aws-node-name">GitHub Repo (@Sayantan-da)</span>
+            </button>
+            <button type="button" class="aws-node-btn" data-node-index="1">
+              <span class="aws-node-step">Stage 02</span>
+              <span class="aws-node-name">AWS Amplify CI/CD (Linux)</span>
+            </button>
+            <button type="button" class="aws-node-btn" data-node-index="2">
+              <span class="aws-node-step">Stage 03</span>
+              <span class="aws-node-name">Amazon S3 Origin Bucket</span>
+            </button>
+            <button type="button" class="aws-node-btn" data-node-index="3">
+              <span class="aws-node-step">Stage 04</span>
+              <span class="aws-node-name">Amazon CloudFront CDN</span>
+            </button>
+          </div>
+
+          <div class="aws-node-detail-box" aria-live="polite">
+            <h4 id="aws-detail-title" class="aws-node-detail-title">Step 01 • Source Control — GitHub Repository
+              (@Sayantan-da)</h4>
+            <p id="aws-detail-text" class="aws-node-detail-text">
+              Holds index.html, styles.css, script.js, amplify.yml, and lowercase SVG assets in a clean Git repository
+              with .gitignore blocking any .env or key files. Pushing to 'main' triggers an AWS Amplify webhook
+              automatically.
+            </p>
+          </div>
+
+          <img src="assets/aws-architecture.svg" width="800" height="260"
+            alt="Diagram of GitHub repository connecting to AWS Amplify CI/CD, deploying static HTML, CSS, and JS to Amazon S3 and serving globally over HTTPS via Amazon CloudFront CDN">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick Command Palette Modal (Ctrl+K / Cmd+K) -->
+  <div id="cmd-modal-backdrop" class="cmd-modal-backdrop" hidden>
+    <div class="cmd-modal" role="dialog" aria-modal="true" aria-labelledby="cmd-dialog-title">
+      <div class="cmd-header">
+        <strong id="cmd-dialog-title">Quick Navigation &amp; Exhibit Jumper</strong>
+        <button type="button" id="close-cmd-btn" class="placard-close-btn">Esc &times;</button>
+      </div>
+      <div style="padding: 12px 16px;">
+        <input type="text" id="cmd-search-input" class="cmd-search-input"
+          placeholder="Filter sections or exhibits (e.g., Exhibit 5, Nyaya, Skills)..." aria-label="Filter commands">
+      </div>
+      <ul class="cmd-list">
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-0"><span>Museum Exhibit 01: Nyaya AI PDF
+              Crash</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-1"><span>Museum Exhibit 02: Kolkata
+              Metro API Validation</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-2"><span>Museum Exhibit 03: AWS Log
+              Analyzer Alert Storm</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-3"><span>Museum Exhibit 04: HealthFlow
+              FHIR Null Batch</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-4"><span>Museum Exhibit 05: The AWS
+              Amplify Hackathon Bug</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-5"><span>Museum Exhibit 06: Async
+              Event-Loop Freeze (pypdf)</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="exhibit-6"><span>Museum Exhibit 07: Log Regex
+              Backtracking (ReDoS)</span><span>Inspect &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="#about"><span>Section: About Me</span><span>Jump
+              &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="#skills"><span>Section: Interactive Skills
+              Matrix</span><span>Jump &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="#projects"><span>Section: Projects &amp; FastAPI
+              Simulator</span><span>Jump &rarr;</span></button></li>
+        <li><button type="button" class="cmd-item-btn" data-cmd-action="theme"><span>Toggle Dark / Light
+              Theme</span><span>Switch &rarr;</span></button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Sayantan Ghosh</strong>
+        <p class="footer-copy">MCA Student @ Techno International, Newtown • Built for the AWS Builder Center Student
+          Hackathon (Nov 2026)</p>
+      </div>
+      <ul class="footer-links" aria-label="Contact and social links">
+        <li><a href="mailto:Sayantanghosh214@gmail.com" class="footer-link">Sayantanghosh214@gmail.com</a></li>
+        <li><a href="https://github.com/Sayantan-da" target="_blank" rel="noopener noreferrer"
+            class="footer-link">GitHub (@Sayantan-da)</a></li>
+        <li><a href="https://linkedin.com/in/sayantan-ghosh-aa9500335" target="_blank" rel="noopener noreferrer"
+            class="footer-link">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

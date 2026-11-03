@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" role="img" aria-label="AWS Amplify Hosting architecture diagram showing GitHub repository pushing to AWS Amplify Build Pipeline, storing static files in Amazon S3, and serving globally through Amazon CloudFront CDN">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="260" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="2"/>
+  <text x="24" y="34" font-family="monospace" font-size="13" font-weight="700" fill="#f59e0b">AWS AMPLIFY HOSTING ARCHITECTURE (NO-BUILD STATIC PIPELINE)</text>
+
+  <!-- Node 1: GitHub -->
+  <g transform="translate(24, 60)">
+    <rect width="155" height="150" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+    <circle cx="77" cy="42" r="20" fill="#0f172a" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="77" y="47" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#f8fafc">Git</text>
+    <text x="77" y="88" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">GitHub Repo</text>
+    <text x="77" y="110" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">Sayantan-da</text>
+    <text x="77" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8">git push main</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <line x1="185" y1="135" x2="215" y2="135" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Node 2: AWS Amplify CI/CD -->
+  <g transform="translate(222, 60)">
+    <rect width="165" height="150" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="57" y="22" width="50" height="38" rx="8" fill="#451a03" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="82" y="46" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#fbbf24">CI/CD</text>
+    <text x="82" y="88" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">AWS Amplify</text>
+    <text x="82" y="110" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">Linux Container</text>
+    <text x="82" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#fbbf24">Zero-Build Verify</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <line x1="393" y1="135" x2="423" y2="135" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Node 3: Amazon S3 -->
+  <g transform="translate(430, 60)">
+    <rect width="155" height="150" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <rect x="52" y="22" width="50" height="38" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="77" y="46" text-anchor="middle" font-family="monospace" font-size="14" font-weight="700" fill="#34d399">S3</text>
+    <text x="77" y="88" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">Amazon S3</text>
+    <text x="77" y="110" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">Managed Origin</text>
+    <text x="77" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#34d399">HTML / CSS / JS</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <line x1="591" y1="135" x2="621" y2="135" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Node 4: Amazon CloudFront -->
+  <g transform="translate(628, 60)">
+    <rect width="148" height="150" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="49" y="22" width="50" height="38" rx="8" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="74" y="46" text-anchor="middle" font-family="monospace" font-size="13" font-weight="700" fill="#7dd3fc">EDGE</text>
+    <text x="74" y="88" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#f8fafc">CloudFront CDN</text>
+    <text x="74" y="110" text-anchor="middle" font-family="monospace" font-size="11" fill="#94a3b8">Global HTTPS</text>
+    <text x="74" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#38bdf8">Brotli / Gzip</text>
+  </g>
+
+  <text x="24" y="240" font-family="monospace" font-size="11" fill="#94a3b8">Case-sensitive Linux validation • Atomic deployments • Instant cache invalidation</text>
+</svg>
