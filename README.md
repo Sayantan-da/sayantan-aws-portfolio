@@ -146,6 +146,7 @@ flowchart TD
 ├── README.md                                  # Repository documentation & architecture guide
 └── assets/
     ├── favicon.svg                            # Custom SG monogram vector
+    ├── og-image.png                           # 1200x630 Open Graph & social card preview
     ├── aws-architecture.svg                   # AWS infrastructure schematic
     └── amplify-build-log-placeholder.svg      # Exhibit 05 build log frame
 ```
