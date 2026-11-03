@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Sayantan Ghosh — Merged Interactive Portfolio & "The Museum of My Mistakes"
+   Sayantan Ghosh — Interactive Portfolio & "The Museum of My Mistakes"
    Vanilla JavaScript (Zero build step, zero external libraries)
    Interactive Features:
    1. 7-Exhibit "Museum of My Mistakes" + Broken vs. Fixed Code Diff Viewer
