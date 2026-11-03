@@ -113,28 +113,34 @@
                 <span class="terminal-dot dot-green"></span>
               </div>
               <span class="terminal-title">sayantan@aws-kolkata: ~/portfolio-cli</span>
+              <button type="button" id="terminal-mobile-toggle" class="terminal-mobile-toggle" aria-expanded="true"
+                aria-controls="terminal-body" aria-label="Toggle Cloud Shell display">
+                <span id="terminal-toggle-label">Minimize Shell ▴</span>
+              </button>
             </div>
 
-            <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
-              <button type="button" class="term-chip-btn" data-cmd="whoami">whoami</button>
-              <button type="button" class="term-chip-btn" data-cmd="skills">skills</button>
-              <button type="button" class="term-chip-btn" data-cmd="projects">projects</button>
-              <button type="button" class="term-chip-btn" data-cmd="aws-status">aws-status</button>
-              <button type="button" class="term-chip-btn" data-cmd="mistakes">mistakes</button>
-              <button type="button" class="term-chip-btn" data-cmd="clear">clear</button>
-            </div>
+            <div id="terminal-body" class="terminal-body">
+              <div class="terminal-chips" role="group" aria-label="Quick terminal commands">
+                <button type="button" class="term-chip-btn" data-cmd="whoami">whoami</button>
+                <button type="button" class="term-chip-btn" data-cmd="skills">skills</button>
+                <button type="button" class="term-chip-btn" data-cmd="projects">projects</button>
+                <button type="button" class="term-chip-btn" data-cmd="aws-status">aws-status</button>
+                <button type="button" class="term-chip-btn" data-cmd="mistakes">mistakes</button>
+                <button type="button" class="term-chip-btn" data-cmd="clear">clear</button>
+              </div>
 
-            <div id="terminal-output" class="terminal-output" aria-live="polite">sayantan@aws-kolkata:~$ whoami
-              Sayantan Ghosh | Backend, AI &amp; Cloud Engineer
-              • MCA @ Techno International, Newtown (2025-2027)
-              • BCA @ Techno India College of Technology (2022-2025)
-              • Tap any command chip above or type 'help' below!</div>
+              <div id="terminal-output" class="terminal-output" aria-live="polite">sayantan@aws-kolkata:~$ whoami
+Sayantan Ghosh | Backend, AI &amp; Cloud Engineer
+• MCA @ Techno International, Newtown (2025-2027)
+• BCA @ Techno India College of Technology (2022-2025)
+• Tap any command chip above or type 'help' below!</div>
 
-            <div class="terminal-input-row">
-              <label for="terminal-input" class="terminal-prompt">sayantan@aws:~$</label>
-              <input type="text" id="terminal-input" class="terminal-input"
-                placeholder="Type help, skills, projects, aws-status..." autocomplete="off">
-              <button type="button" id="terminal-run-btn" class="terminal-run-btn">Run</button>
+              <div class="terminal-input-row">
+                <label for="terminal-input" class="terminal-prompt">sayantan@aws:~$</label>
+                <input type="text" id="terminal-input" class="terminal-input"
+                  placeholder="Type help, skills, projects, aws-status..." autocomplete="off">
+                <button type="button" id="terminal-run-btn" class="terminal-run-btn">Run</button>
+              </div>
             </div>
           </aside>
         </div>

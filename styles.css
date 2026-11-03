@@ -464,6 +464,30 @@ img {
   color: #cbd5e1;
 }
 
+.terminal-mobile-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 3px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background-color: #0f172a;
+  color: #38bdf8;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.terminal-mobile-toggle:hover {
+  border-color: var(--aws-orange);
+  color: #fbbf24;
+}
+
+.terminal-card.terminal-collapsed .terminal-body {
+  display: none;
+}
+
 .terminal-chips {
   display: flex;
   flex-wrap: wrap;
@@ -1425,8 +1449,51 @@ img {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints & Mobile Phone Ergonomics
    ========================================================================== */
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 14px;
+    padding-bottom: 24px;
+  }
+  .terminal-card {
+    margin-top: 16px;
+    border-radius: var(--radius-sm);
+  }
+  .terminal-topbar {
+    padding: 8px 12px;
+  }
+  .terminal-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 10px;
+    gap: 6px;
+    scrollbar-width: thin;
+  }
+  .term-chip-btn {
+    min-height: 36px;
+    padding: 4px 10px;
+    font-size: 0.74rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .terminal-output {
+    min-height: 85px;
+    max-height: 120px;
+    padding: 10px 12px;
+    font-size: 0.76rem;
+    line-height: 1.45;
+  }
+  .terminal-input-row {
+    padding: 2px 8px;
+  }
+  .terminal-input {
+    min-height: 38px;
+    font-size: 0.8rem;
+  }
+}
+
 @media (min-width: 640px) {
   .container { padding: 0 24px; }
   .exhibits-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1438,6 +1505,8 @@ img {
 }
 
 @media (min-width: 960px) {
+  .terminal-mobile-toggle { display: none; }
+  .terminal-card.terminal-collapsed .terminal-body { display: block !important; }
   .hero-grid { grid-template-columns: 1.3fr 1fr; }
   .exhibits-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .placard-triad { grid-template-columns: repeat(3, 1fr); }

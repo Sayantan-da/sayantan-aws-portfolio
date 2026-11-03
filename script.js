@@ -624,6 +624,20 @@
     });
   }
 
+  var terminalMobileToggle = document.getElementById("terminal-mobile-toggle");
+  var terminalCard = document.querySelector(".terminal-card");
+  var terminalToggleLabel = document.getElementById("terminal-toggle-label");
+
+  if (terminalMobileToggle && terminalCard) {
+    terminalMobileToggle.addEventListener("click", function () {
+      var isCollapsed = terminalCard.classList.toggle("terminal-collapsed");
+      terminalMobileToggle.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+      if (terminalToggleLabel) {
+        terminalToggleLabel.textContent = isCollapsed ? "Open Shell ▾" : "Minimize Shell ▴";
+      }
+    });
+  }
+
   /* ------------------------------------------------------------------------
      6. Interactive Skills Filter Matrix
      ------------------------------------------------------------------------ */
