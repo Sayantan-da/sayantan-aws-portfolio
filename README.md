@@ -11,17 +11,6 @@
 
 ---
 
-## 🎯 Why This Portfolio Stands Out to Interviewers
-
-Most developer portfolios only showcase finished, sanitized projects with zero visibility into how an engineer actually investigates and solves failures. This project is built differently:
-
-1. **The Museum of My Mistakes**: Interactive postmortems dissecting real failures (token overflows, UTF-8 byte cuts, alert storms, transactional null halts) alongside **Broken vs. Fixed code diffs**.
-2. **Interactive FastAPI Endpoint Simulator**: Test live JSON request/response payloads in-browser for 4 backend projects (zero backend required).
-3. **Embedded Interactive Cloud Shell**: An in-browser terminal allowing recruiters to run commands (`whoami`, `skills`, `projects`, `aws-status`, `mistakes`).
-4. **Cloud-Native AWS Hosting**: Zero-build static deployment on AWS Amplify with automated S3 origin storage and CloudFront global edge CDN delivery.
-
----
-
 ## 🏗️ Architecture & Deployment Flow
 
 ```mermaid
